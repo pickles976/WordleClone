@@ -1,5 +1,4 @@
-{
-    "words": [
+export const answers = [
         "abase",
         "abate",
         "abbey",
@@ -2315,4 +2314,3 @@
         "zesty",
         "zonal"
     ]
-}

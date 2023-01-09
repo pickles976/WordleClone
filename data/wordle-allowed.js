@@ -1,5 +1,4 @@
-{
-    "words": [
+export const allowed = [
         "aalii",
         "aargh",
         "aarti",
@@ -10657,4 +10656,3 @@
         "zymes",
         "zymic"
     ]
-}
