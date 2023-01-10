@@ -9,6 +9,7 @@
     flex-grow: 1;
     flex-shrink: 3;
     background-color: blue;
+    color: white;
     width: 45px;
     height: 45px;
     display: flex;

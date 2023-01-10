@@ -9,22 +9,51 @@ const COLORMAP = {
 const wordBox = document.getElementById('word-input')
 const submitButton = document.getElementById('submit-button')
 const guessBox = document.getElementById('guess-container')
+const guessCounter = document.getElementById('guess-counter')
 
 const game = new GameManager()
-game.startNewRound()
+game.start()
 
 submitButton.onclick = () => submitWord(wordBox.value.toLowerCase())
 
+function updateElements() {
+
+    // If there are any guesses
+    if (game.guesses.length > 0) {
+
+        Array.from(guessBox.children).forEach((child, i) => {
+
+            child.innerHTML = game.lastGuess.word[i]
+            child.style.backgroundColor = COLORMAP[game.lastGuess.score[i]]
+
+        })
+
+        guessCounter.innerHTML = game.guesses.length
+
+    } 
+    // if there are no guesses yet
+    else 
+    {
+        Array.from(guessBox.children).forEach((child, i) => {
+
+            child.innerHTML = i
+            child.style.backgroundColor = "#0000FF"
+
+        })
+
+        guessCounter.innerHTML = 0
+    }
+
+}
+
 function submitWord(word) {
 
-    let guess = game.evaluateWord(word)
+    try {
+        game.guess(word)
+    } catch (e) {
+        alert(e)
+    }
 
-    // Change the letter and color in the boxes
-    Array.from(guessBox.children).forEach((child, i) => {
-
-        child.innerHTML = guess.word[i]
-        child.style.backgroundColor = COLORMAP[guess.score[i]]
-
-    })
+    updateElements()
 
 }

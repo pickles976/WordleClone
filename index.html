@@ -14,9 +14,11 @@
     <script src="test.js" type="module"></script>
     <script src="main.js" type="module"></script>
 
-    <label for="word-input">Enter your guess:</label>
-    <input type="text" id="word-input" name="word-input" minlength=5 maxlength=5 required/>
-    <button id="submit-button">Submit</button>
+    <div>
+        <label for="word-input">Enter your guess:</label>
+        <input type="text" id="word-input" name="word-input" minlength=5 maxlength=5 required/>
+        <button id="submit-button">Submit</button>
+    </div>
 
     <div id='guess-container' class="guess-container">
         <div id='0' class="guess-character">0</div>
@@ -24,6 +26,11 @@
         <div id='2' class="guess-character">2</div>
         <div id='3' class="guess-character">3</div>
         <div id='4' class="guess-character">4</div>
+    </div>
+
+    <div>
+        Current guesses: 
+        <text id="guess-counter">0</text>
     </div>
     
 </body>
