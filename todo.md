@@ -2,6 +2,6 @@
 - [x] Test Game object for single guesses
 - [x] Implement logic for multiple guesses
 - [x] Test Game object for multiple guesses w/ historical data
-- [ ] Add some basic visualization of the historical game data
-- [ ] Visualization in Svelte.js for multiple guesses/historical data
+- [x] Add some basic visualization of the historical game data
 - [ ] Add information content of a guess
+- [ ] Visualization in Svelte.js for multiple guesses/historical data

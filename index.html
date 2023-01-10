@@ -14,6 +14,8 @@
     <script src="test.js" type="module"></script>
     <script src="main.js" type="module"></script>
 
+    <h2>Blurgle:</h2>
+
     <div>
         <label for="word-input">Enter your guess:</label>
         <input type="text" id="word-input" name="word-input" minlength=5 maxlength=5 required/>
@@ -21,16 +23,36 @@
     </div>
 
     <div id='guess-container' class="guess-container">
-        <div id='0' class="guess-character">0</div>
-        <div id='1' class="guess-character">1</div>
-        <div id='2' class="guess-character">2</div>
-        <div id='3' class="guess-character">3</div>
-        <div id='4' class="guess-character">4</div>
+        <div id='0' class="guess-character"></div>
+        <div id='1' class="guess-character"></div>
+        <div id='2' class="guess-character"></div>
+        <div id='3' class="guess-character"></div>
+        <div id='4' class="guess-character"></div>
     </div>
 
     <div>
         Current guesses: 
         <text id="guess-counter">0</text>
+    </div>
+
+    <div>
+        <h2>Player Stats:</h2>
+        <div>
+            Games Played: 
+            <text id="game-counter">0</text>
+        </div>
+        <div>
+            Total Wins: 
+            <text id="win-counter">0</text>
+        </div>
+        <div>
+            Current Streak: 
+            <text id="streak-counter">0</text>
+        </div>
+        <div>
+            Max Streak: 
+            <text id="max-streak-counter">0</text>
+        </div>
     </div>
     
 </body>

@@ -9,7 +9,14 @@ const COLORMAP = {
 const wordBox = document.getElementById('word-input')
 const submitButton = document.getElementById('submit-button')
 const guessBox = document.getElementById('guess-container')
+
 const guessCounter = document.getElementById('guess-counter')
+
+const gameCounter = document.getElementById('game-counter')
+const winCounter = document.getElementById('win-counter')
+const streakCounter = document.getElementById('streak-counter')
+const maxStreakCounter = document.getElementById('max-streak-counter')
+
 
 const game = new GameManager()
 game.start()
@@ -28,21 +35,21 @@ function updateElements() {
 
         })
 
-        guessCounter.innerHTML = game.guesses.length
-
     } 
     // if there are no guesses yet
     else 
     {
         Array.from(guessBox.children).forEach((child, i) => {
-
-            child.innerHTML = i
-            child.style.backgroundColor = "#0000FF"
-
+            child.innerHTML = ""
+            child.style.backgroundColor = "#CCCCCC"
         })
-
-        guessCounter.innerHTML = 0
     }
+
+    guessCounter.innerHTML = game.guesses.length
+    gameCounter.innerHTML = game.played
+    winCounter.innerHTML = game.win
+    streakCounter.innerHTML = game.currentStreak
+    maxStreakCounter.innerHTML = game.maxStreak
 
 }
 
