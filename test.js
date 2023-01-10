@@ -23,16 +23,16 @@ function testTrie() {
     // Test superstring
     console.assert(!trie.has("perilously"))
 
-    // // Test superstring insertion
-    // trie.insert("perilously")
-    // console.assert(trie.has("perilously"))
+    // Test superstring insertion
+    trie.insert("perilously")
+    console.assert(trie.has("perilously"))
 
-    // // Test lowercase
-    // trie.insert("UPPERCASE")
+    // Test lowercase
+    trie.insert("UPPERCASE")
 
-    // console.assert(trie.has("UPPERCASE"))
-    // console.assert(trie.has("uppercase"))
-    // console.assert(trie.has("uPpErCaSe"))
+    console.assert(trie.has("UPPERCASE"))
+    console.assert(trie.has("uppercase"))
+    console.assert(trie.has("uPpErCaSe"))
 
 }
 

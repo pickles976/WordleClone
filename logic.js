@@ -3,7 +3,7 @@ import { allowed } from "./data/wordle-allowed.js"
 import { answers } from "./data/wordle-answers.js"
 
 /**
- * Runs the game loop. 
+ * Manages game state and word data.
  */
 export class GameManager {
 
@@ -13,16 +13,16 @@ export class GameManager {
         this.allWords = []
         this.trie = null
 
-        this.init()
+        this._init()
     }
 
-    init() {
+    _init() {
         this.trie = new Trie()
         this.allWords = allowed.concat(answers)
         this.allWords.forEach((word) => this.trie.insert(word))
     }
 
-    startNewRound() {
+    _startNewRound() {
         this.currentAnswer = answers[Math.floor(answers.length * Math.random())]
         this.guesses = []
         console.log(this.currentAnswer)

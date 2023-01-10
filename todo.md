@@ -1,0 +1,7 @@
+- [x] Implement Wordle logic and visualization for a single guess
+- [ ] Test Game object for single guesses
+- [ ] Implement logic for multiple guesses
+- [ ] Test Game object for multiple guesses w/ historical data
+- [ ] Add some basic visualization of the historical game data
+- [ ] Visualization in Svelte.js for multiple guesses/historical data
+- [ ] Add information content of a guess
