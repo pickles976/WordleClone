@@ -25,13 +25,13 @@ export class Trie {
 
         let currentNode = this.root
 
-        word.toLowerCase().split('').forEach((character) => {
+        for (const character of word.toLowerCase()) {
             if (currentNode.has(character)){
                 currentNode = currentNode.children[character]
             } else {
                 return false
             }
-        })
+        }
 
         return (true && currentNode.isEnd)
 

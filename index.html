@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blurgle</title>
+
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
-    <script src="trie.js" type="module"></script>
     <script src="logic.js" type="module"></script>
+    <script src="test.js" type="module"></script>
     <script src="main.js" type="module"></script>
 
     <label for="word-input">Enter your guess:</label>
     <input type="text" id="word-input" name="word-input" minlength=5 maxlength=5 required/>
     <button id="submit-button">Submit</button>
+
+    <div id='guess-container' class="guess-container">
+        <div id='0' class="guess-character">0</div>
+        <div id='1' class="guess-character">1</div>
+        <div id='2' class="guess-character">2</div>
+        <div id='3' class="guess-character">3</div>
+        <div id='4' class="guess-character">4</div>
+    </div>
     
 </body>
 </html>
