@@ -54,5 +54,13 @@ My commit messages are pretty short so I want to give insight into my thought pr
 
 9. I tried out the Redux-style store in Svelte. It's really awesome and easy to use. It's very easy to subscribe props to store objects with the $ operator. I was hoping to add more visualization to game over stuff and the information theory stuff but the way my game object was set up meant I would either need to send callbacks into the object, or I would need to move some of the game loop logic up into App.svelte, and I felt like that wasn't necessary since I have already worked on this project for quite a bit. If I had known a bit more about Svelte, I hopefully could have architected my app a bit better from the start instead of going so heavy on the OOP. But I am decently pleased with how it turned out even if it is very basic.
 
+## Thoughts and areas of improvement:
+
+What I would do differently if I had to start over from scratch:
+- Use the [official](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) private field notation in js
+- Take some more time to think about properly splitting up the concerns of the game into an MVC architecture. I would probably try to build around the store since that seems to be the core of a Svelte app.
+- Pay more close attention to the subtle features of wordle. The fact that the keyboard is both input and a "score" system made it feel invisible to me, but I noticed its utility once it was gone.
+- Use better names, game stats is confusing with Statistics.js
+
 Thanks for coming up with a fun project idea!
 
