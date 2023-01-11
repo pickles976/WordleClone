@@ -12,8 +12,8 @@ export class StatisticsManager {
         this.possibleAnswers = answers
         this.uncheckedLetters = new Set(allLetters)
         this.invalidLetters = new Set()
-        this.probabilities = []
-        this.information = []
+
+        this.guesses = []
     }
 
     /**
@@ -37,12 +37,9 @@ export class StatisticsManager {
         this.possibleAnswers = Array.from(newPossibleAnswers)
 
         const probability = this.possibleAnswers.length / prevPossibilitySize
-        this.probabilities.push(probability)
 
         // log2(p) = ln(p) / ln(2)
-        this.information.push(-Math.log(probability) / Math.log(2))
-
-        console.log(this)
+        this.guesses.push(new GuessInformation(this.possibleAnswers.length, -Math.log(probability) / Math.log(2)))
     }
     
     /**
@@ -158,5 +155,13 @@ export class StatisticsManager {
 
         return filteredPossibilities
 
+    }
+}
+
+class GuessInformation {
+
+    constructor(numAnswers, information) {
+        this.numAnswers = numAnswers
+        this.information = information
     }
 }

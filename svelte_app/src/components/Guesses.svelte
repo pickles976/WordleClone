@@ -16,6 +16,7 @@
         align-items: center;
         display: flex; 
         flex-direction: column;
-        width: 100%
+        width: 100%;
+        margin: 0 auto;
     }
 </style>

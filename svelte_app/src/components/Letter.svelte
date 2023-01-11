@@ -1,5 +1,4 @@
 <script>
-
     const COLORMAP = {
     0 : "#CCCCCC",
     1 : "#CCCC00",

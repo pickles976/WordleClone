@@ -18,6 +18,5 @@
 		display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 25%;
 	}
 </style>

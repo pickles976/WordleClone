@@ -5,5 +5,5 @@
 - [x] Add some basic visualization of the historical game data
 - [x] Add information content of a guess
 - [x] Visualization for guesses Svelte.js
-- [ ] Add visualization for stats in Svelte.js
+- [x] Add visualization for stats in Svelte.js
 - [ ] Add visualization of the keyboard

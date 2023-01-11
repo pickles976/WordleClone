@@ -1,9 +1,34 @@
 # Wordle Clone
 
-## Running The Game
+## HTML app
+
+### Motivation
+
+I wanted to build an app in the simplest framework possible, a pure vanilla site. I avoided Typescript because I didn't want to mess with webpack and an extra build step. A cli program would have been easier but I am a visual person and wanted to see my guesses.
+
+### Running The Game
+
+Make sure you have node v16 or higher to run http-server
 
 ```bash
+    cd html_app
     npm install http-server
+    http-server .
+```
+
+## Svelte app
+
+### Motivation
+
+I have heard good things about Svelte and wanted to try it out, and this project has a central state + dynamic components so I figured I would try it out.
+
+### Running The Game
+
+Make sure you have node v16 or higher
+
+```bash
+    cd svelte_app
+    npm install
     http-server .
 ```
 
@@ -27,4 +52,7 @@ My commit messages are pretty short so I want to give insight into my thought pr
 
 8. I read through some Svelte tutorials and got started with a Svelte template. There is considerably less boilerplate compared to something like React, but I'm not sure how it would be for larger projects where you need to manage a central state-- I am not sure what solutions it offers for something like that. It's very fun though!
 
+9. I tried out the Redux-style store in Svelte. It's really awesome and easy to use. It's very easy to subscribe props to store objects with the $ operator. I was hoping to add more visualization to game over stuff and the information theory stuff but the way my game object was set up meant I would either need to send callbacks into the object, or I would need to move some of the game loop logic up into App.svelte, and I felt like that wasn't necessary since I have already worked on this project for quite a bit. If I had known a bit more about Svelte, I hopefully could have architected my app a bit better from the start instead of going so heavy on the OOP. But I am decently pleased with how it turned out even if it is very basic.
+
+Thanks for coming up with a fun project idea!
 
