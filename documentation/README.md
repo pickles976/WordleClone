@@ -29,7 +29,7 @@ Make sure you have node v16 or higher
 ```bash
     cd svelte_app
     npm install
-    http-server .
+    npm run dev
 ```
 
 ## Commit Message info
