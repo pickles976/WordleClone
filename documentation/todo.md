@@ -4,5 +4,6 @@
 - [x] Test Game object for multiple guesses w/ historical data
 - [x] Add some basic visualization of the historical game data
 - [x] Add information content of a guess
-- [ ] Visualization in Svelte.js
+- [x] Visualization for guesses Svelte.js
+- [ ] Add visualization for stats in Svelte.js
 - [ ] Add visualization of the keyboard
