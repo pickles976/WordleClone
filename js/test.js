@@ -1,4 +1,5 @@
-import { GameManager } from "./logic.js"
+import { GameManager, Guess } from "./logic.js"
+import { StatisticsManager } from "./statistics.js"
 import { Trie } from "./trie.js"
 
 function testTrie() {
@@ -135,6 +136,27 @@ function testMultipleRounds() {
 
 }
 
+function testStatisticsManager() {
+
+    const statsMan = new StatisticsManager()
+
+    // Test the word 'Kebab'
+    let guess1 = new Guess("bobby", [1, 0, 2, 1, 0])
+    statsMan.updatePossibleAnswers(guess1)
+
+    console.assert(statsMan.possibleAnswers.length === 34)
+
+    let guess2 = new Guess("knife", [2, 0, 0, 0, 1])
+    statsMan.updatePossibleAnswers(guess2)
+
+    console.assert(statsMan.possibleAnswers.length === 1)
+
+    // Test we got the only possible answer
+    console.assert(statsMan.possibleAnswers[0] === "kebab")
+
+}
+
 testTrie()
 testSingleRound()
 testMultipleRounds()
+testStatisticsManager()

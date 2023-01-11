@@ -1,4 +1,5 @@
 import { GameManager } from "./logic.js"
+import { StatisticsManager } from "./statistics.js"
 
 const COLORMAP = {
     0 : "#CCCCCC",
@@ -20,6 +21,8 @@ const maxStreakCounter = document.getElementById('max-streak-counter')
 
 const game = new GameManager()
 game.start()
+
+const stats = new StatisticsManager()
 
 submitButton.onclick = () => submitWord(wordBox.value.toLowerCase())
 
@@ -57,6 +60,7 @@ function submitWord(word) {
 
     try {
         game.guess(word)
+        stats.updatePossibleAnswers(game.lastGuess)
     } catch (e) {
         alert(e)
     }

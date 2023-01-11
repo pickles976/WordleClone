@@ -112,7 +112,7 @@ export class GameManager {
 
 }
 
-class Guess {
+export class Guess {
 
     constructor(word, score){
         this.word = word
